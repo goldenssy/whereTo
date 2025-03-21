@@ -22,14 +22,17 @@ nav ul {
     font-family: monospace;
     text-decoration: none;
     cursor: pointer;
+    size: 10px;
 }
 
 nav ul li {
     display: inline;
+    
 }
 nav ul li a:link {
     color: white; /* Unvisited links */
     text-decoration: none;
+    
 }
 nav ul li a:visited {
     color: white; /* Visited links */
@@ -40,6 +43,7 @@ nav ul li a:hover {
     background-color: rgba(255, 255, 255, 0.2); /* Highlight effect */
     border-radius: 5px;
     color: white;
+    
 }
 
 nav ul li a:active {
@@ -56,6 +60,7 @@ nav ul li a, nav ul li input, nav ul li button {
     font-family: monospace;
     text-decoration: none;
     cursor: pointer;
+   
 }
 
 nav ul li a:hover, nav ul li button:hover {
@@ -67,11 +72,16 @@ nav ul li a:hover, nav ul li button:hover {
 
 /* Header styling */
 header {
-    text-align: center;
-    padding: 50px 20px;
-    background-color: rgba(0, 0, 0, 0.8);/* Semi-transparent overlay */
-    margin-bottom: 20px;
-    font-family: cursive;
+    text-align: left; /* Center the text inside the header */
+    margin-left: 20px; /* Center the header horizontally */
+    padding: 20px; /* Add padding inside the box */
+    background-color: rgb(000, 000, 020); /* Set a grey background */
+    margin-left: 20px auto; /* Add space above and below the header */
+    max-width: 800px; /* Limit the width of the header box */
+    border-radius: 10px; /* Optional: Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add a subtle shadow */
+    color: white; /* Ensure text is readable */
+    font-family:  Helvetica; /* Use a clean font */
 }
 
 header h1 {
@@ -108,7 +118,7 @@ li {
     line-height: 1.5;
     background-color: rgba(0, 0, 0, 0.3);
 }
-/* Style for the main content box */
+
 main {
     text-align: left;
     max-width: 800px; /* Set a maximum width for the box */
@@ -162,4 +172,44 @@ footer ul li a {
 
 footer ul li a:hover {
     text-decoration: underline;
+}
+
+
+@keyframes fadeInFromBottom {
+    from {
+        opacity: 0; /* Start fully transparent */
+        transform: translateY(50px); /* Start 50px below its original position */
+    }
+    to {
+        opacity: 1; /* Fully visible */
+        transform: translateY(0); /* Move to its original position */
+    }
+}
+
+/* Apply the animation to the entire page */
+body {
+    animation: fadeInFromBottom 1.5s ease-in-out; /* Duration: 1.5s, easing: ease-in-out */
+    opacity: 1; /* Ensure the body is visible after the animation */
+}
+
+#black-overlay {
+    position: fixed; /* Cover the entire screen */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black; /* Black background */
+    z-index: 9999; /* Ensure it stays on top of all content */
+    animation: fadeOutBlack 1.5s ease-in-out forwards; /* Fade-out animation */
+}
+
+/* Fade-out animation for the black overlay */
+@keyframes fadeOutBlack {
+    from {
+        opacity: 1; /* Fully black */
+    }
+    to {
+        opacity: 0; /* Fully transparent */
+        visibility: hidden; /* Hide the overlay after fading out */
+    }
 }
