@@ -19,12 +19,33 @@ nav ul {
     justify-content: space-around;
     background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
     padding: 10px;
+    font-family: monospace;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 nav ul li {
     display: inline;
 }
+nav ul li a:link {
+    color: white; /* Unvisited links */
+    text-decoration: none;
+}
+nav ul li a:visited {
+    color: white; /* Visited links */
+    text-decoration: none;
+}
 
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Highlight effect */
+    border-radius: 5px;
+    color: white;
+}
+
+nav ul li a:active {
+    color: white; /* Active links */
+    text-decoration: none;
+}
 nav ul li a, nav ul li input, nav ul li button {
     color: white;
     text-decoration: none;
@@ -32,19 +53,25 @@ nav ul li a, nav ul li input, nav ul li button {
     border: none;
     background: none;
     font-size: 16px;
+    font-family: monospace;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 nav ul li a:hover, nav ul li button:hover {
     background-color: rgba(255, 255, 255, 0.2); /* Highlight effect */
     border-radius: 5px;
+    color: white;
+    text-decoration: none;
 }
 
 /* Header styling */
 header {
-    text-align: left;
+    text-align: center;
     padding: 50px 20px;
     background-color: rgba(0, 0, 0, 0.8);/* Semi-transparent overlay */
     margin-bottom: 20px;
+    font-family: cursive;
 }
 
 header h1 {
@@ -81,7 +108,17 @@ li {
     line-height: 1.5;
     background-color: rgba(0, 0, 0, 0.3);
 }
-
+/* Style for the main content box */
+main {
+    text-align: left;
+    max-width: 800px; /* Set a maximum width for the box */
+    margin-left: 20px; /* Center the box horizontally */
+    padding: 20px; /* Add padding inside the box */
+    background-color: rgba(0, 0, 0, 0.5); /* Optional: Light background for contrast */
+    border-radius: 10px; /* Optional: Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add a subtle shadow */
+    color: rgb(255, 255, 255); /* Ensure text is readable */
+}
 /* Button styling */
 button {
     cursor: pointer;
